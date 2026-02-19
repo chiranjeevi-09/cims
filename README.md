@@ -5,9 +5,9 @@ A comprehensive platform for reporting, tracking, and managing civic issues in y
 ## Project Structure
 
 ```text
-civic/
-├── user side/cims-main/      # User-facing application (Report issues, view progress)
-└── dept side/app-84dd1k6elqm9/ # Department portal (Manage issues, update status)
+cims/
+├── cimsuser/      # User-facing application (Report issues, view progress)
+└── cimsdept/      # Department portal (Manage issues, update status)
 ```
 
 ## Prerequisites
@@ -21,7 +21,7 @@ civic/
 
 Navigate to the user application directory:
 ```bash
-cd "user side/cims-main"
+cd cimsuser
 ```
 
 Install dependencies:
@@ -41,7 +41,7 @@ By default, the application will run at [http://localhost:8080](http://localhost
 
 Navigate to the department portal directory:
 ```bash
-cd "dept side/app-84dd1k6elqm9"
+cd cimsdept
 ```
 
 Install dependencies:
@@ -51,9 +51,9 @@ npm install
 
 Start the development server:
 ```bash
-npm run dev
+npx vite
 ```
-By default, the portal will run at [http://localhost:3000](http://localhost:3000).
+By default, the portal will run at [http://localhost:5173](http://localhost:5173).
 
 ## Tech Stack
 
@@ -65,7 +65,8 @@ By default, the portal will run at [http://localhost:3000](http://localhost:3000
 
 ## Features
 
-- **Issue Reporting**: Citizens can upload photos of civic problems.
-- **AI Analysis**: Automated categorization and description generation for reported issues.
-- **Live Tracking**: Real-time status updates on issue resolution.
-- **Admin Dashboard**: Department-specific tools to prioritize and manage city maintenance tasks.
+- **Issue Reporting**: Citizens can upload photos of civic problems and add details.
+- **AI Analysis**: Automated categorization and description generation for reported issues using Gemini AI.
+- **Live Tracking**: Real-time status updates (Solved, In Progress, Pending) on issue resolution.
+- **Admin Dashboard**: Department-specific tools to prioritize, manage, and update the status of city maintenance tasks.
+- **User Profiles**: Personalized dashboards for citizens to track their reported issues.
